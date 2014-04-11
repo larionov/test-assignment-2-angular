@@ -1,0 +1,528 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"curren",
+				"currentContractor"
+			],
+			[
+				"rela",
+				"relation"
+			],
+			[
+				"form",
+				"formSaveCancel"
+			],
+			[
+				"productRe",
+				"productResource"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 201.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 233.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/larionov/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/larionov/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/larionov/Project/tram/protected/extensions/giix/INSTALL",
+		"/home/larionov/Project/tram/mobiletemplates/www/inspection.html",
+		"/home/larionov/Project/tram/js/vendor/angular/docs/index-nocache.html",
+		"/home/larionov/Project/tram/index.php",
+		"/home/larionov/Project/tram/protected/modules/rights/views/authItem/permissions.php",
+		"/home/larionov/Project/tram/protected/modules/analytics/modules/reports/views/service/pages/page/tableViewPage.php",
+		"/home/larionov/Project/tram/protected/components/ViewAction.php",
+		"/home/larionov/Project/tram/js/modules/core/controllers/analytics/view/viewBase.js",
+		"/home/larionov/Project/tram/protected/modules/analytics/modules/view/controllers/_base/BaseRestContractorRelationController.php",
+		"/home/larionov/Project/tram/js/vendor/angular/version.json",
+		"/home/larionov/Project/tram/protected/modules/rights/views/authItem/roles.php",
+		"/home/larionov/Project/tram/js/routes.js",
+		"/home/larionov/Project/tram/protected/modules/admin/models/RoleAbility.php",
+		"/home/larionov/Project/tram/js/modules/core/controllers/admin/main/roles_old.js",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/workCondition.php",
+		"/home/larionov/Project/tram/js/modules/core/controllers/admin/main/workCondition.js",
+		"/home/larionov/Project/tram/js/modules/core/controllers/admin/main/workConditionGroup.js",
+		"/home/larionov/Project/tram/protected/migrations/m131122_112008_add_import_sku.php",
+		"/home/larionov/Project/tram/protected/controllers/MobileAppController.php",
+		"/home/larionov/Project/tram/css/main.css",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/workCondition_old.php",
+		"/home/larionov/Project/tram/node_modules/http-proxy/lib/http-proxy/passes/web-outgoing.js",
+		"/home/larionov/Project/tram/protected/components/WriteToFile.php",
+		"/home/larionov/Project/tram/js/modules/core/controllers/catalog/area/contractor.js",
+		"/home/larionov/Project/tram/protected/modules/contractor/models/Contractor.php",
+		"/home/larionov/Project/tram/protected/modules/contractor/ContractorModule.php",
+		"/home/larionov/Project/tram/js/vendor/iscroll/CONTRIBUTING.md",
+		"/home/larionov/Project/tram/protected/config/console.php",
+		"/home/larionov/Project/tram/protected/modules/analytics/modules/view/models/contractors/ContractorO.php",
+		"/home/larionov/Project/tram/js/vendor/underscore/CNAME",
+		"/home/larionov/Project/tram/css/old/form.css",
+		"/home/larionov/Project/tram/js/vendor/angular/docs/img/angularjs-for-header-only.svg",
+		"/home/larionov/Project/tram/from_csv_sds_foods.json",
+		"/home/larionov/Project/cxm_web_onboarding/app/index.html",
+		"/home/larionov/Project/cxm_web_onboarding/bower.json",
+		"/home/larionov/Project/cxm_web_shopassist/app/styles/bootstrap/_buttons.scss",
+		"/home/larionov/Project/cxm_web_shopassist/app/styles/bootstrap/_button-groups.scss",
+		"/home/larionov/Project/cxm_web_shopassist/app/index.html",
+		"/home/larionov/Project/cxm_web_shopassist/app/views/main.haml",
+		"/home/larionov/Project/cxm_web_shopassist/Gruntfile.js",
+		"/home/larionov/Project/cxm_web_shopassist/app/styles/bootstrap.scss",
+		"/home/larionov/Project/cxm_web_admin/app/styles/main.scss",
+		"/home/larionov/Project/cxm_web_admin/app/views/main.haml",
+		"/home/larionov/Project/cxm_web_admin/app/index.html",
+		"/home/larionov/Project/cxm_web_admin/app/bower_components/gumby/sass/_fonts.scss",
+		"/home/larionov/Project/cxm_web_admin/app/scripts/controllers/choose_brands.coffee",
+		"/home/larionov/Project/cxm_web_admin/admin.sublime-workspace",
+		"/home/larionov/Project/cxm_web_admin/app/views/choose_sizes.haml",
+		"/home/larionov/Project/cxm_web_admin/app/styles/pages/_sizes.scss",
+		"/home/larionov/Project/cxm_web_admin/app/scripts/controllers/choose_sizes.coffee",
+		"/home/larionov/Project/cxm_web_admin/app/scripts/directives/slider.coffee",
+		"/home/larionov/Project/cxm_web_admin/admin.sublime-project",
+		"/home/larionov/Project/cxm_web_onboarding/app/bower_components/ng-iScroll/src/ng-iscroll.js",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/main.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/controllers/choose_stores.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/choose_stores.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/choose_sizes.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/directives/slider.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/_buttons.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/choose_brands.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/controllers/choose_sizes.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/pages/_brands.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/app.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/directives/fit-window.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/signup.haml",
+		"/home/larionov/Project/cxm_web_onboarding/Gruntfile.js",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/bootstrap.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/bootstrap/_mixins.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/bootstrap/_variables.scss",
+		"/home/larionov/Project/cxm_web_onboarding/package.json",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/pages/_home.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/main.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/_forms.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/_icons.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/retina/_retina.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/controllers/enter_phone.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/enter_phone.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/controllers/signup.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/bootstrap/_grid.scss",
+		"/home/larionov/Project/cxm_web_onboarding/build.log",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/retina/_retina-sprite.scss",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/_fonts.scss",
+		"/home/larionov/Project/cxm_web_onboarding/.tmp/styles/main.css",
+		"/home/larionov/Project/cxm_web_onboarding/dist/views/main.html",
+		"/home/larionov/Project/cxm_web_onboarding/dist/index.html",
+		"/home/larionov/Project/cxm_web_onboarding/dist/styles/main.css",
+		"/home/larionov/Project/cxm_web_onboarding/.gitignore",
+		"/home/larionov/Project/cxm_web_onboarding/app/styles/fonts.scss",
+		"/home/larionov/Project/cxm_web_onboarding/test/spec/controllers/main.coffee",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/sign_up.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/test.haml",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/sign_up.html",
+		"/home/larionov/Project/cxm_web_onboarding/app/views/main.html",
+		"/home/larionov/Project/cxm_web_onboarding/app/scripts/controllers/main.coffee",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/salesChannel/distributor.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/salesChannel/store.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/salesChannel/horeca.js",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/markerKpi.php",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/cardDistr.php",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/card.php",
+		"/home/larionov/Project/tram/js/jquery-ui/jquery-ui-1.8.16.min.js",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/contactPersons/views/employees/pages/catalog.php",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/salesChannel/retailer.js",
+		"/home/larionov/Project/tram/protected/modules/analytics/modules/view/views/contractor/pages/view/card.php",
+		"/home/larionov/Project/tram/js/angular/services/formSaveCancel.js",
+		"/home/larionov/Project/tram/protected/components/utils/Formatting.php",
+		"/home/larionov/Project/tram/css/old/fonts.css",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/groups/views/contractor/pages/relations/productsRelation.php",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/product/contractor.js",
+		"/home/larionov/Project/tram/js/angular/controllers/admin/main/users.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/partner/ourCompany.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/partner/contractor.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/brand/brand.js",
+		"/home/larionov/Project/tram/protected/modules/field/modules/visit/views/field/pages/view/card.php",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/product/productRange.js",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/product/product.js",
+		"/home/larionov/Project/tram/js/angular/controllers/admin/main/roles.js",
+		"/home/larionov/Project/tram/protected/modules/catalog/modules/product/controllers/ContractorController.php",
+		"/home/larionov/Project/tram/protected/modules/rights/messages/fr/core.php",
+		"/home/larionov/Project/tram/protected/modules/rights/messages/de/core.php",
+		"/home/larionov/Project/tram/protected/extensions/giix/README",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/contactPersons/contactPersons.js",
+		"/home/larionov/Project/tram/protected/modules/field/modules/visit/controllers/FieldController.php",
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/area/contractor.js",
+		"/home/larionov/Project/tram/protected/models/soap/ProductRequest.php",
+		"/home/larionov/Project/tram/protected/models/Product.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"confirm:",
+			"confirm =",
+			"confirm",
+			"\"undefined\"",
+			"\"",
+			"?\")) ",
+			"?\"))",
+			"\"",
+			"alert",
+			"laert",
+			"app",
+			"alert",
+			"alert(",
+			"$(elClone)",
+			"removeAttr",
+			"                    $(elClone).",
+			"$(elClone)",
+			"$parent.",
+			"ng-if",
+			"$level",
+			"children",
+			"]].$children",
+			"$children",
+			"<p",
+			"group_name",
+			"$scope.currentContractorWorkConditions",
+			"index",
+			"min-widt",
+			"iscroll",
+			"type=\"text\"",
+			"text",
+			"res",
+			"readable",
+			"5050",
+			"\"",
+			"\",\n",
+			"A\",",
+			"\"",
+			"A",
+			"xs",
+			"outline",
+			"tab-focus",
+			"tab-focus(",
+			" btn-lg",
+			"btn-lg ",
+			"basehref",
+			"Open+sans",
+			"cxm_web_onboarding",
+			"{:\"bar-value\" =",
+			"start",
+			"slider",
+			"dashed",
+			"rgba(255,255,255, .25)",
+			")",
+			"(",
+			";",
+			"element",
+			":slider",
+			"sizes",
+			"stores",
+			"choose_stores",
+			"27px",
+			"iScroll",
+			"phone",
+			"device",
+			"$screen-tablet",
+			"container-fixed",
+			"cache",
+			"x",
+			"/styles/",
+			"path",
+			"$screen-phone",
+			"320px",
+			"auto",
+			"cover",
+			" #8b8f8e;",
+			"all",
+			".col-md-narrow",
+			"bottom",
+			"888b8a",
+			"span",
+			"phone",
+			"label",
+			"10",
+			"48px",
+			"1.5",
+			"iconsx2",
+			"icons-x2",
+			"icon",
+			"$container-sm",
+			"screen-sm-min",
+			"427px",
+			"580",
+			"$button-height-mobile",
+			"compass",
+			"haml",
+			"haml:dist",
+			"processhtml",
+			"concurrent",
+			"prefixe",
+			"autoprefixer",
+			"include",
+			"portrait tablets and up",
+			"central",
+			"center",
+			"$grid-columns",
+			"make-grid-columns",
+			"styles",
+			"images",
+			"haml",
+			"processhtml",
+			"$headings-font-family",
+			"compass",
+			"checkbox",
+			"language",
+			"coffee:",
+			"server",
+			"serve",
+			".tmp",
+			"compile",
+			"haml",
+			"cxmWebOnboardingApp",
+			"currentContractorAddresses",
+			"input",
+			"addAddres",
+			"addAddress",
+			"currentContractorAddre",
+			"address"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"viewpermi",
+				"protected/modules/admin/modules/main/views/service/pages/relations/rolesPermission.php"
+			],
+			[
+				"roles",
+				"js/modules/core/controllers/admin/main/roles.js"
+			],
+			[
+				"main.css",
+				"css/main.css"
+			],
+			[
+				"worcondol",
+				"protected/modules/catalog/modules/salesChannel/views/contractor/pages/view/workCondition_old.php"
+			],
+			[
+				"salecontractor.js",
+				"js/modules/core/controllers/catalog/salesChannel/contractor.js"
+			],
+			[
+				"formsa",
+				"js/modules/core/services/formSaveCancel.js"
+			],
+			[
+				"formsave",
+				"js/angular/services/formSaveCancel.js"
+			],
+			[
+				"ourcompany",
+				"js/angular/controllers/catalog/partner/ourCompany.js"
+			],
+			[
+				"product/con",
+				"js/angular/controllers/catalog/product/contractor.js"
+			],
+			[
+				"productrange",
+				"js/angular/controllers/catalog/product/productRange.js"
+			],
+			[
+				"useride",
+				"protected/components/UserIdentity.php"
+			],
+			[
+				"contact",
+				"js/angular/controllers/catalog/contactPersons/contactPersons.js"
+			],
+			[
+				"conta",
+				"js/angular/controllers/catalog/contactPersons.js"
+			],
+			[
+				"app.js",
+				"js/angular/app.js"
+			],
+			[
+				"userind",
+				"protected/components/UserIdentity.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
