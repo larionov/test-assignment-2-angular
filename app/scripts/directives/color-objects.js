@@ -2,10 +2,10 @@
 'use strict';
 
 angular.module('testAngular1App')
-.filter('notUsed', function () {
+  .filter('notUsed', function () {
     return function (a, used, index) {
       var out = _.filter(a, function (item) {
-        return item.name === "" || used[index] === item.name || used.indexOf(item.name) === -1;
+        return item.name === '' || used[index] === item.name || used.indexOf(item.name) === -1;
       });
       return out;
     };
@@ -64,7 +64,15 @@ angular.module('testAngular1App')
           }, true);
 
         },
-
+        checkRange: function (range, value, property) {
+          range = range.split('..');
+          if (range[0] === '' || cV(value, property.type) >= cV(range[0], property.type)) {
+            if (range[1] === '' || cV(value, property.type) <= cV(range[1], property.type)) {
+              return true;
+            }
+          }
+          return false;
+        },
         // build groups tree
         initGroups: function () {
           var sortFiltered = _.filter($scope.sortLevel, function (t) {return t !== '';});
@@ -79,8 +87,11 @@ angular.module('testAngular1App')
                 for (var range in property.valueColors) {
                   var color = property.valueColors[range];
                   range = range.split('..');
-                  if (range[0] === "" || cV(value, property.type) >= cV(range[0], property.type)) {
-                    if (range[1] === "" || cV(value, property.type) <= cV(range[1], property.type)) {
+                  if (checkRange(range, value, property)) {
+                    return range.join('..');
+                  }
+                  if (range[0] === '' || cV(value, property.type) >= cV(range[0], property.type)) {
+                    if (range[1] === '' || cV(value, property.type) <= cV(range[1], property.type)) {
                       return range.join('..');
                     }
                   }
@@ -107,11 +118,10 @@ angular.module('testAngular1App')
         },
         getGroupColor: function (group, propertyName) {
           var property = $scope.colorObjectsProperties[propertyName];
-            if (property.valueColors && property.valueColors[group]) {
-                return property.valueColors[group];
-            }
+          if (property.valueColors && property.valueColors[group]) {
+            return property.valueColors[group];
+          }
           return $scope.defaultColor;
-
         },
         getItemColor: function (item) {
           if (item === undefined) {
@@ -123,19 +133,15 @@ angular.module('testAngular1App')
               value = item[propertyName];
             if (property.palleteType === 'value') {
               if (property.valueColors && property.valueColors[value]) {
-                  return property.valueColors[value];
+                return property.valueColors[value];
               }
             } else {
               for (var range in property.valueColors) {
                 var color = property.valueColors[range];
-                range = range.split('..');
-                if (range[0] === "" || cV(value, property.type) >= cV(range[0], property.type)) {
-                  if (range[1] === "" || cV(value, property.type) <= cV(range[1], property.type)) {
-                    return color;
-                  }
+                if (checkRange(range, value, property)) {
+                  return color;
                 }
               }
-
             }
           }
           return $scope.defaultColor;
@@ -156,16 +162,15 @@ angular.module('testAngular1App')
 
         moveItem: function (index, newIndex, isSeparator) {
           var tmp;
-          $scope.$apply(function () {
-            if (isSeparator) {
-                tmp = $scope.colorObjects.splice(index, 1);
-                $scope.colorObjects.splice(newIndex + (index < newIndex ? -1 : 0), 0, tmp[0]);
-            } else {
-                tmp = $scope.colorObjects[newIndex];
-                $scope.colorObjects[newIndex] = $scope.colorObjects[index];
-                $scope.colorObjects[index] = tmp;
-            }
-          });
+          if (isSeparator) {
+            tmp = $scope.colorObjects.splice(index, 1);
+            $scope.colorObjects.splice(newIndex + (index < newIndex ? -1 : 0), 0, tmp[0]);
+          } else {
+            tmp = $scope.colorObjects[newIndex];
+            $scope.colorObjects[newIndex] = $scope.colorObjects[index];
+            $scope.colorObjects[index] = tmp;
+          }
+          $scope.$apply();
         },
         getItemPosition: function (index) {
           var x = 0, y = 0, cols = Math.floor($scope.containerWidth / ($scope.objectWidth + $scope.gutterWidth));
@@ -205,13 +210,15 @@ angular.module('testAngular1App')
         },
         onMouseMove: function (e) {
           if ($scope.dragging !== false) {
-              $scope.dragStart = true;
+            $scope.dragStart = true;
           } else {
             return;
           }
 
+          // if drag started close expanded
           $scope.expanded = false;
 
+          // check where we are hovering
           var scrollTop = $scope.rootElement[0].scrollTop;
           var off = colorObjects.getRootOffset($scope.rootElement, true),
             point = colorObjects.transformPoint(off, e);
@@ -222,6 +229,8 @@ angular.module('testAngular1App')
           off.top -= scrollTop;
           var insertPosition = colorObjects.getItemAtPoint(colorObjects.transformPoint(off, e, true));
           $scope.dragOver = insertPosition.index;
+
+          // check if inserting in between
           if (insertPosition.isSeparator) {
             var pos = colorObjects.getItemPosition(insertPosition.index);
             $scope.dragOver = false;
@@ -252,17 +261,20 @@ angular.module('testAngular1App')
           var scrollTop = $scope.rootElement[0].scrollTop;
           off.top -= scrollTop;
           var insertPosition = colorObjects.getItemAtPoint(colorObjects.transformPoint(off, e, true));
-
-
+          // if we were dragging move element
           if ($scope.dragStart !== false && insertPosition.index !== false) {
-              colorObjects.moveItem($scope.dragging, insertPosition.index, insertPosition.isSeparator);
+            colorObjects.moveItem($scope.dragging, insertPosition.index, insertPosition.isSeparator);
 
           }
+
+          // if we are clicking - toggle expand
           if ($scope.expanded !== $scope.draggingHash && $scope.dragging !== false && $scope.dragStart === false) {
             $scope.expanded = $scope.draggingHash;
           } else {
             $scope.expanded = false;
           }
+
+          // reset drag & drop
           $scope.dragging = false;
           $scope.dragStart = false;
           $scope.dragOver = false;
@@ -342,14 +354,19 @@ angular.module('testAngular1App')
           }
           var offset = {x: e.offsetX, y: e.offsetY};
           colorObjects.onStartDrag(element, offset, scope);
+          var s = scope.draggingInsertClone.scope();
           scope.$apply(function () {
             colorObjects.dragging = scope.$index;
             colorObjects.draggingHash = scope.item.$$hashKey;
+            s.item  = scope.item;
+            console.log(s);
           });
+          s.$apply();
         });
       }
     };
-}])
+  }])
+  // tree rendering engine
   .directive('groupsTree', ['$compile', function ($compile) {
     return {
       restrict: 'A',
@@ -383,21 +400,22 @@ angular.module('testAngular1App')
     };
   }]);
 
-function djb2(str){
-  var hash = 5381;
-  for (var i = 0; i < str.length; i++) {
-    hash = ((hash << 5) + hash) + str.charCodeAt(i);
+  function djb2(str){
+    var hash = 5381;
+    for (var i = 0; i < str.length; i++) {
+      hash = ((hash << 5) + hash) + str.charCodeAt(i);
+    }
+    return hash;
   }
-  return hash;
-}
 
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-function hsvToRgb(h, s, v) {
+  function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
+  function hsvToRgb(h, s, v) {
     var r, g, b, i, f, p, q, t;
     if (h && s === undefined && v === undefined) {
-        s = h.s, v = h.v, h = h.h;
+      s = h.s, v = h.v, h = h.h;
     }
     i = Math.floor(h * 6);
     f = h * 6 - i;
@@ -405,41 +423,41 @@ function hsvToRgb(h, s, v) {
     q = v * (1 - f * s);
     t = v * (1 - (1 - f) * s);
     switch (i % 6) {
-        case 0: r = v, g = t, b = p; break;
-        case 1: r = q, g = v, b = p; break;
-        case 2: r = p, g = v, b = t; break;
-        case 3: r = p, g = q, b = v; break;
-        case 4: r = t, g = p, b = v; break;
-        case 5: r = v, g = p, b = q; break;
+      case 0: r = v, g = t, b = p; break;
+      case 1: r = q, g = v, b = p; break;
+      case 2: r = p, g = v, b = t; break;
+      case 3: r = p, g = q, b = v; break;
+      case 4: r = t, g = p, b = v; break;
+      case 5: r = v, g = p, b = q; break;
     }
     return {
-        r: Math.floor(r * 255),
-        g: Math.floor(g * 255),
-        b: Math.floor(b * 255)
+      r: Math.floor(r * 255),
+      g: Math.floor(g * 255),
+      b: Math.floor(b * 255)
     };
-}
+  }
 
-function hashStringToColor(str) {
-  if (isNumber(str)) {
-    str = str.toFixed(5);
+  function hashStringToColor(str) {
+    if (isNumber(str)) {
+      str = str.toFixed(5);
+    }
+    var hash = djb2(str);
+    var h = (hash & 0xFF0000) >> 16;
+    var s = 0.8;
+    var v = 0.8;
+    var color = hsvToRgb(h/255, s, v);
+    return "rgb(" + color.r + ',' + color.g + ',' + color.b + ')';
   }
-  var hash = djb2(str);
-  var h = (hash & 0xFF0000) >> 16;
-  var s = 0.8;
-  var v = 0.8;
-  var color = hsvToRgb(h/255, s, v);
-  return "rgb(" + color.r + ',' + color.g + ',' + color.b + ')';
-}
-var cV = function (value, type) {
-  if (type === 'number') {
-    return value;
-  }
-  if (type === 'date') {
-    return Date.parse(value);
-  }
-};
+  var cV = function (value, type) {
+    if (type === 'number') {
+      return value;
+    }
+    if (type === 'date') {
+      return Date.parse(value);
+    }
+  };
 
-_.groupByMulti = function (obj, values, context) {
+  _.groupByMulti = function (obj, values, context) {
     if (!values.length){
       return obj;
     }
@@ -449,7 +467,7 @@ _.groupByMulti = function (obj, values, context) {
       byFirst[prop] = _.groupByMulti(byFirst[prop], rest, context);
     }
     return byFirst;
-};
+  };
 
 })();
 
