@@ -5,12 +5,9 @@
 angular.module('testAngular1App')
 .filter('notUsed', function () {
     return function (a, used, index) {
-      var out = [];
-      for (var i in a) {
-         if (used.slice(0, index > 0 ? index -1 : 0).indexOf(a[i].name) === -1) {
-          out.push(a[i]);
-         }
-      }
+      var out = _.filter(a, function (item) {
+        return item.name === "" || used[index] === item.name || used.indexOf(item.name) === -1;
+      });
       return out;
     };
 });
