@@ -1,0 +1,142 @@
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+.color-objects {
+
+  position: relative;
+
+  width: 1400px;
+  height: 500px;
+  overflow: hidden;
+
+  h1 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    position: absolute;
+    right: 50px;
+    width: 450px;
+    > .legend {
+      height: 400px;
+      width: 250px;
+      overflow-y: auto;
+    }
+    > .sort {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 200px;
+      p {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  ul.indent {
+    margin: 0 10px 5px 0px;
+    padding: 5px 0 0 10px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    li {
+      display: block;
+    }
+  }
+  .list {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .groupMode {
+    padding-left: 10px;
+    li.item {
+      position: static;
+      display:block;
+      float: left;
+      margin: 0 10px 10px 0;
+    }
+  }
+
+}
+
+li.item {
+  position: absolute;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background: #3dbdb2;
+  margin: 0;
+  padding: 5px;
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+
+  border: 2px solid white;
+  border-radius: 2px;
+  color: #333;
+  font-size: 13px;
+  font-family: sans-serif;
+  overflow: hidden;
+  &.dragging-insert-clone {
+    position: absolute;
+    width: 4px;
+    background: #333;
+    border: 0;
+    padding: 0;
+  }
+  &.dragOver {
+    border: 2px dotted black;
+    padding: 3px;
+  }
+  &.dragging {
+    opacity: 0.9;
+  }
+  &.dragging-clone {
+    position: absolute;
+    opacity: 0.5;
+    display: block;
+  }
+
+  p {
+    text-shadow: 0px 0px 1px #fff;
+    margin: 0;
+    padding: 0;
+    display: none;
+    &.base {
+      display: block;
+    }
+  }
+  &.expanded {
+    height: auto;
+    z-index: 10;
+    p {
+      display: block;
+    }
+  }
+}

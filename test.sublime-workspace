@@ -35,11 +35,86 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/home/larionov/Software/draganddrop.js",
+			"settings":
+			{
+				"buffer_size": 5010,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/main.html",
+			"settings":
+			{
+				"buffer_size": 322,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/color-objects.scss",
+			"settings":
+			{
+				"buffer_size": 407,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "'use strict';\n\nangular.module('testAngular1App')\n  .controller('MainCtrl', function ($scope) {\n    $scope.exampleOptions = {\n      properties: {\n        id: {base: true},\n        type: {base: true},\n        name: {base: true},\n        batter: {base: false},\n        topping: {base: false},\n        kkal: {base: false},\n\n      }\n    };\n    $scope.exampleData = [\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'None', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Glazed', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Powdered Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Chocolate with Sprinkles', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Chocolate', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Regular', topping: 'Maple', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'None', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Glazed', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Powdered Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Chocolate with Sprinkles', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Chocolate', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Chocolate', topping: 'Maple', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'None', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Glazed', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Powdered Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Chocolate with Sprinkles', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Chocolate', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Blueberry', topping: 'Maple', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'None', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Glazed', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Powdered Sugar', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Chocolatewith Sprinkles', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Chocolate', kkal: },\n      {id: '0001', type: 'donut', name: 'Cake', batter: 'Devil\\'s Food', topping: 'Maple', kkal: },\n      {id: '0002', type: 'donut', name: 'Raised', batter: 'Regular', topping: 'None', kkal: },\n      {id: '0002', type: 'donut', name: 'Raised', batter: 'Regular', topping: 'Glazed', kkal: },\n      {id: '0002', type: 'donut', name: 'Raised', batter: 'Regular', topping: 'Sugar', kkal: },\n      {id: '0002', type: 'donut', name: 'Raised', batter: 'Regular', topping: 'Chocolate', kkal: },\n      {id: '0002', type: 'donut', name: 'Raised', batter: 'Regular', topping: 'Maple', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Regular', topping: 'None', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Regular', topping: 'Glazed', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Regular', topping: 'Chocolate', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Regular', topping: 'Maple', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Chocolate', topping: 'None', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Chocolate', topping: 'Glazed', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Chocolate', topping: 'Chocolate', kkal: },\n      {id: '0003', type: 'donut', name: 'Old Fashioned', batter: 'Chocolate', topping: 'Maple', kkal: },\n      {id: '0004', type: 'bar', name: 'Bar', batter: 'Regular', topping: 'Chocolate', kkal: },\n      {id: '0004', type: 'bar', name: 'Bar', batter: 'Regular', topping: 'Maple', kkal: },\n      {id: '0005', type: 'twist', name: 'Twist', batter: 'Regular', topping: 'Glazed', kkal: },\n      {id: '0005', type: 'twist', name: 'Twist', batter: 'Regular', topping: 'Sugar', kkal: },\n      {id: '0006', type: 'filled', name: 'Filled', batter: 'Regular', topping: 'Glazed', kkal: },\n      {id: '0006', type: 'filled', name: 'Filled', batter: 'Regular', topping: 'Powdered Sugar', kkal: },\n      {id: '0006', type: 'filled', name: 'Filled', batter: 'Regular', topping: 'Chocolate', kkal: },\n      {id: '0006', type: 'filled', name: 'Filled', batter: 'Regular', topping: 'Maple', kkal: },\n    ];\n  });\n\n\n",
+			"file": "app/scripts/controllers/main.js",
+			"file_size": 5307,
+			"file_write_time": 130417112498315599,
+			"settings":
+			{
+				"buffer_size": 5309,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/directives/color-objects.js",
+			"settings":
+			{
+				"buffer_size": 403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/directives/tstt.js",
+			"settings":
+			{
+				"buffer_size": 8353,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".editorconfig",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".jshintrc",
+			"settings":
+			{
+				"buffer_size": 396,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 201.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -71,7 +146,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -92,6 +167,10 @@
 	},
 	"file_history":
 	[
+		"/home/larionov/Project/test-angular-1/app/styles/color-objects.scss",
+		"/home/larionov/Project/test-angular-1/app/scripts/directives/color-objects.js",
+		"/home/larionov/Project/test-angular-1/node_modules/grunt-google-cdn/node_modules/bower/test/install.js",
+		"/home/larionov/Project/test-angular-1/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/node_modules/bin-wrapper/node_modules/mout/lang/isNull.js",
 		"/home/larionov/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/larionov/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/home/larionov/Project/tram/protected/extensions/giix/INSTALL",
@@ -215,15 +294,11 @@
 		"/home/larionov/Project/tram/protected/modules/rights/messages/fr/core.php",
 		"/home/larionov/Project/tram/protected/modules/rights/messages/de/core.php",
 		"/home/larionov/Project/tram/protected/extensions/giix/README",
-		"/home/larionov/Project/tram/js/angular/controllers/catalog/contactPersons/contactPersons.js",
-		"/home/larionov/Project/tram/protected/modules/field/modules/visit/controllers/FieldController.php",
-		"/home/larionov/Project/tram/js/angular/controllers/catalog/area/contractor.js",
-		"/home/larionov/Project/tram/protected/models/soap/ProductRequest.php",
-		"/home/larionov/Project/tram/protected/models/Product.php"
+		"/home/larionov/Project/tram/js/angular/controllers/catalog/contactPersons/contactPersons.js"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -238,6 +313,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"kkal: },",
+			", kkal: ",
+			"},",
+			"name",
+			"type",
+			"name",
+			"'",
+			"clone",
+			"td",
+			"getBlockStart",
+			"OldFashioned",
+			"Devil's Food",
+			"'[^']+'\\},",
+			"[^']+'\\},",
+			".+'\\},",
+			".+'},",
+			"'",
+			"\\'",
+			"'",
+			"'.+'",
+			"'.+'},$",
+			"'\\s+'},$",
+			"'\\s+'$",
+			"Old Fashioned",
+			"	",
+			"  ",
+			"quick_repeat_list",
+			"collection",
+			"trackByIdObjFn",
+			"parse",
+			"linker",
+			"colorObjects",
+			"ul",
 			"confirm:",
 			"confirm =",
 			"confirm",
@@ -332,45 +440,12 @@
 			"427px",
 			"580",
 			"$button-height-mobile",
-			"compass",
-			"haml",
-			"haml:dist",
-			"processhtml",
-			"concurrent",
-			"prefixe",
-			"autoprefixer",
-			"include",
-			"portrait tablets and up",
-			"central",
-			"center",
-			"$grid-columns",
-			"make-grid-columns",
-			"styles",
-			"images",
-			"haml",
-			"processhtml",
-			"$headings-font-family",
-			"compass",
-			"checkbox",
-			"language",
-			"coffee:",
-			"server",
-			"serve",
-			".tmp",
-			"compile",
-			"haml",
-			"cxmWebOnboardingApp",
-			"currentContractorAddresses",
-			"input",
-			"addAddres",
-			"addAddress",
-			"currentContractorAddre",
-			"address"
+			"compass"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -383,8 +458,495 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/home/larionov/Software/draganddrop.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								842,
+								842
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/color-objects.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 407,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/controllers/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								452,
+								452
+							],
+							[
+								547,
+								547
+							],
+							[
+								641,
+								641
+							],
+							[
+								744,
+								744
+							],
+							[
+								857,
+								857
+							],
+							[
+								955,
+								955
+							],
+							[
+								1049,
+								1049
+							],
+							[
+								1144,
+								1144
+							],
+							[
+								1241,
+								1241
+							],
+							[
+								1337,
+								1337
+							],
+							[
+								1442,
+								1442
+							],
+							[
+								1557,
+								1557
+							],
+							[
+								1657,
+								1657
+							],
+							[
+								1753,
+								1753
+							],
+							[
+								1848,
+								1848
+							],
+							[
+								1945,
+								1945
+							],
+							[
+								2041,
+								2041
+							],
+							[
+								2146,
+								2146
+							],
+							[
+								2261,
+								2261
+							],
+							[
+								2361,
+								2361
+							],
+							[
+								2457,
+								2457
+							],
+							[
+								2556,
+								2556
+							],
+							[
+								2657,
+								2657
+							],
+							[
+								2757,
+								2757
+							],
+							[
+								2866,
+								2866
+							],
+							[
+								2984,
+								2984
+							],
+							[
+								3088,
+								3088
+							],
+							[
+								3188,
+								3188
+							],
+							[
+								3283,
+								3283
+							],
+							[
+								3380,
+								3380
+							],
+							[
+								3476,
+								3476
+							],
+							[
+								3576,
+								3576
+							],
+							[
+								3672,
+								3672
+							],
+							[
+								3774,
+								3774
+							],
+							[
+								3878,
+								3878
+							],
+							[
+								3985,
+								3985
+							],
+							[
+								4088,
+								4088
+							],
+							[
+								4192,
+								4192
+							],
+							[
+								4298,
+								4298
+							],
+							[
+								4407,
+								4407
+							],
+							[
+								4512,
+								4512
+							],
+							[
+								4607,
+								4607
+							],
+							[
+								4698,
+								4698
+							],
+							[
+								4794,
+								4794
+							],
+							[
+								4889,
+								4889
+							],
+							[
+								4987,
+								4987
+							],
+							[
+								5093,
+								5093
+							],
+							[
+								5194,
+								5194
+							],
+							[
+								5291,
+								5291
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 391.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/scripts/directives/color-objects.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/scripts/directives/tstt.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2316,
+								2316
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".editorconfig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/EditorConfig/EditorConfig.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": ".jshintrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -426,7 +988,7 @@
 	"project": "test.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
