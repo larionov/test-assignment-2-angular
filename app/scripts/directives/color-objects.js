@@ -1,7 +1,6 @@
 (function () {
 'use strict';
 
-
 angular.module('testAngular1App')
 .filter('notUsed', function () {
     return function (a, used, index) {
