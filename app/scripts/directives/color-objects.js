@@ -1,60 +1,6 @@
 (function () {
 'use strict';
 
-function djb2(str){
-  var hash = 5381;
-  for (var i = 0; i < str.length; i++) {
-    hash = ((hash << 5) + hash) + str.charCodeAt(i);
-  }
-  return hash;
-}
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-function HSVtoRGB(h, s, v) {
-    var r, g, b, i, f, p, q, t;
-    if (h && s === undefined && v === undefined) {
-        s = h.s, v = h.v, h = h.h;
-    }
-    i = Math.floor(h * 6);
-    f = h * 6 - i;
-    p = v * (1 - s);
-    q = v * (1 - f * s);
-    t = v * (1 - (1 - f) * s);
-    switch (i % 6) {
-        case 0: r = v, g = t, b = p; break;
-        case 1: r = q, g = v, b = p; break;
-        case 2: r = p, g = v, b = t; break;
-        case 3: r = p, g = q, b = v; break;
-        case 4: r = t, g = p, b = v; break;
-        case 5: r = v, g = p, b = q; break;
-    }
-    return {
-        r: Math.floor(r * 255),
-        g: Math.floor(g * 255),
-        b: Math.floor(b * 255)
-    };
-}
-
-function hashStringToColor(str) {
-  if (isNumber(str)) {
-    str = str.toFixed(5);
-  }
-  var hash = djb2(str);
-  var h = (hash & 0xFF0000) >> 16;
-  var s = 0.8;
-  var v = 0.8;
-  var color = HSVtoRGB(h/255, s, v);
-  return "rgb(" + color.r + ',' + color.g + ',' + color.b + ')';
-}
-var cV = function (value, type) {
-  if (type === 'number') {
-    return value;
-  }
-  if (type === 'date') {
-    return Date.parse(value);
-  }
-};
 
 angular.module('testAngular1App')
 .filter('notUsed', function () {
@@ -69,18 +15,6 @@ angular.module('testAngular1App')
     };
 });
 
-_.groupByMulti = function (obj, values, context) {
-    if (!values.length){
-      return obj;
-    }
-    var byFirst = _.groupBy(obj, values[0], context),
-      rest = values.slice(1);
-    for (var prop in byFirst) {
-      byFirst[prop] = _.groupByMulti(byFirst[prop], rest, context);
-    }
-    return byFirst;
-};
-
 angular.module('testAngular1App')
   .controller('colorObjectsController', [
     '$scope', '$element', '$window', '$compile',
@@ -94,7 +28,7 @@ angular.module('testAngular1App')
           $scope.dragging = false;
           $scope.draggingHash = false;
           $scope.dragStart = false;
-          $scope.rootElement = element;
+          $scope.rootElement = false;
           $scope.elementsMap = {};
           $scope.gutterWidth = 10;
           $scope.expanded = false;
@@ -282,15 +216,13 @@ angular.module('testAngular1App')
 
           $scope.expanded = false;
 
-
           var off = colorObjects.getRootOffset($scope.rootElement, true),
-            point = colorObjects.transformPoint(off, e);
+            point = colorObjects.transformPoint(off, e),
+            scrollTop = $scope.rootElement[0].scrollTop;
           $scope.draggingClone.css('left', point.x + 'px');
           $scope.draggingClone.css('top',  point.y + 'px');
 
-
-          off = colorObjects.getRootOffset($scope.rootElement);
-
+          off.top -= scrollTop;
           var insertPosition = colorObjects.getItemAtPoint(colorObjects.transformPoint(off, e, true));
           $scope.dragOver = insertPosition.index;
           if (insertPosition.isSeparator) {
@@ -298,7 +230,7 @@ angular.module('testAngular1App')
             $scope.dragOver = false;
 
             $scope.draggingInsertClone.css('left', (pos.x - $scope.gutterWidth /2 - 2) + 'px');
-            $scope.draggingInsertClone.css('top',  pos.y + 'px');
+            $scope.draggingInsertClone.css('top',  pos.y - scrollTop + 'px');
           }
           $scope.$apply();
         },
@@ -356,7 +288,7 @@ angular.module('testAngular1App')
             '</p>' +
           '</div>' +
         '</form>' +
-        '<ul ng-if="!groupMode" class="list" ng-class="{groupMode:groupMode, list: true}">' +
+        '<ul id="colorObjectsList" ng-show="!groupMode" class="list" ng-class="{groupMode:groupMode, list: true}">' +
           '<li ng-repeat="item in colorObjects" ng-class="{expanded: item.$$hashKey === expanded, dragging: $index === dragging, dragOver: $index === dragOver}" color-objects-item ng-style="{left: x + \'px\', top: y + \'px\', backgroundColor: getItemColor(item)}">{{pos}} {{$index}}</li>' +
         '</ul>' +
         '<div ng-if="groupMode" class="list" ng-class="{groupMode:groupMode, list: true}">' +
@@ -378,6 +310,7 @@ angular.module('testAngular1App')
 
           scope.draggingClone = angular.element(element[0].querySelector('.dragging-clone'));
           scope.draggingInsertClone = angular.element(element[0].querySelector('.dragging-insert-clone'));
+          scope.rootElement = angular.element(document.querySelector('#colorObjectsList'));
           element.addClass('color-objects');
 
           angular.element($window).on('mouseup', colorObjects.onMouseUp);
@@ -447,4 +380,74 @@ angular.module('testAngular1App')
       }
     };
   }]);
+
+function djb2(str){
+  var hash = 5381;
+  for (var i = 0; i < str.length; i++) {
+    hash = ((hash << 5) + hash) + str.charCodeAt(i);
+  }
+  return hash;
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+function hsvToRgb(h, s, v) {
+    var r, g, b, i, f, p, q, t;
+    if (h && s === undefined && v === undefined) {
+        s = h.s, v = h.v, h = h.h;
+    }
+    i = Math.floor(h * 6);
+    f = h * 6 - i;
+    p = v * (1 - s);
+    q = v * (1 - f * s);
+    t = v * (1 - (1 - f) * s);
+    switch (i % 6) {
+        case 0: r = v, g = t, b = p; break;
+        case 1: r = q, g = v, b = p; break;
+        case 2: r = p, g = v, b = t; break;
+        case 3: r = p, g = q, b = v; break;
+        case 4: r = t, g = p, b = v; break;
+        case 5: r = v, g = p, b = q; break;
+    }
+    return {
+        r: Math.floor(r * 255),
+        g: Math.floor(g * 255),
+        b: Math.floor(b * 255)
+    };
+}
+
+function hashStringToColor(str) {
+  if (isNumber(str)) {
+    str = str.toFixed(5);
+  }
+  var hash = djb2(str);
+  var h = (hash & 0xFF0000) >> 16;
+  var s = 0.8;
+  var v = 0.8;
+  var color = hsvToRgb(h/255, s, v);
+  return "rgb(" + color.r + ',' + color.g + ',' + color.b + ')';
+}
+var cV = function (value, type) {
+  if (type === 'number') {
+    return value;
+  }
+  if (type === 'date') {
+    return Date.parse(value);
+  }
+};
+
+_.groupByMulti = function (obj, values, context) {
+    if (!values.length){
+      return obj;
+    }
+    var byFirst = _.groupBy(obj, values[0], context),
+      rest = values.slice(1);
+    for (var prop in byFirst) {
+      byFirst[prop] = _.groupByMulti(byFirst[prop], rest, context);
+    }
+    return byFirst;
+};
+
 })();
+
