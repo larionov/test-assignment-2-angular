@@ -212,9 +212,10 @@ angular.module('testAngular1App')
 
           $scope.expanded = false;
 
+          var scrollTop = $scope.rootElement[0].scrollTop;
           var off = colorObjects.getRootOffset($scope.rootElement, true),
-            point = colorObjects.transformPoint(off, e),
-            scrollTop = $scope.rootElement[0].scrollTop;
+            point = colorObjects.transformPoint(off, e);
+
           $scope.draggingClone.css('left', point.x + 'px');
           $scope.draggingClone.css('top',  point.y + 'px');
 
@@ -246,8 +247,13 @@ angular.module('testAngular1App')
         },
 
         onMouseUp: function (e) {
-          var off = colorObjects.getRootOffset($scope.rootElement),
-            insertPosition = colorObjects.getItemAtPoint(colorObjects.transformPoint(off, e, true));
+          var off = colorObjects.getRootOffset($scope.rootElement, true);
+
+          var scrollTop = $scope.rootElement[0].scrollTop;
+          off.top -= scrollTop;
+          var insertPosition = colorObjects.getItemAtPoint(colorObjects.transformPoint(off, e, true));
+
+
           if ($scope.dragStart !== false && insertPosition.index !== false) {
               colorObjects.moveItem($scope.dragging, insertPosition.index, insertPosition.isSeparator);
 
